@@ -1,5 +1,8 @@
 package com.example.springsecurityl2.config;
 
+import com.example.springsecurityl2.repository.UserRepository;
+import com.example.springsecurityl2.service.JPAUserDetailsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,6 +11,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -37,20 +43,30 @@ public class SecurityConfiguration {
 
         http.headers(headersConfigurer ->
                 headersConfigurer.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
-//
-//        http.authorizeHttpRequests(auth ->
-//                auth
-//                        .requestMatchers(mvcMatcherBuilder.pattern("/h2-console")).permitAll()
-//                        //This line is optional in .authenticated() case as .anyRequest().authenticated()
-//                        //would be applied for H2 path anyway
-//                        .requestMatchers(PathRequest.toH2Console()).authenticated()
-//                        .anyRequest().authenticated()
-//        );
+
+        http.authorizeHttpRequests(auth ->
+                auth
+                        .requestMatchers(mvcMatcherBuilder.pattern("/h2-console")).permitAll()
+                        //This line is optional in .authenticated() case as .anyRequest().authenticated()
+                        //would be applied for H2 path anyway
+                        .requestMatchers(PathRequest.toH2Console()).authenticated()
+                        .anyRequest().authenticated()
+        );
 
         http.formLogin(Customizer.withDefaults());
         http.httpBasic(Customizer.withDefaults());
 
         return http.build();
 
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return NoOpPasswordEncoder.getInstance();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService(@Autowired UserRepository userRepository){
+        return new JPAUserDetailsService(userRepository);
     }
 }

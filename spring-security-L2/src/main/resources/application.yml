@@ -3,11 +3,14 @@ spring:
     url: jdbc:h2:mem:testdb
     username: admin
     password: admin
-#    driver-class-name: org.h2.Driver
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
   h2:
     console:
       enabled: true
-#  sql:
-#    init:
-#      schema-locations: schema.sql
-#      data-locations: data.sql
+  sql:
+    init:
+      schema-locations: classpath*:schema.sql
+      data-locations: classpath*:data.sql
+
