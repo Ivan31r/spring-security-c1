@@ -1,0 +1,1 @@
+insert into "USER" (id, username, password) values (1, 'bill', '12345');
