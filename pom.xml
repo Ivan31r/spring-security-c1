@@ -16,9 +16,10 @@
 
     <modules>
         <module>spring-security-l1</module>
-        <module>spring-security-L2</module>
+        <module>spring-security-l2</module>
         <module>spring-security-l3</module>
         <module>spring-security-l4</module>
+        <module>spring-security-l5</module>
     </modules>
 
 </project>
