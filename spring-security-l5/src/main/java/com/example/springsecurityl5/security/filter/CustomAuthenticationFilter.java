@@ -1,16 +1,13 @@
 package com.example.springsecurityl5.security.filter;
 
 import com.example.springsecurityl5.security.Authentication.CustomAuthentication;
-import jakarta.servlet.Filter;
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
+import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
@@ -24,12 +21,16 @@ public class CustomAuthenticationFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        String authorization = ((HttpServletRequest) servletRequest).getHeader("Authentication");
+        String authorization = ((HttpServletRequest) servletRequest).getHeader("Authorization");
         var customAuthentication = new CustomAuthentication(authorization, null);
-        Authentication authResult = authenticationManager.authenticate(customAuthentication);
-        if (authResult.isAuthenticated()) { // необязательная проверка
-            SecurityContextHolder.getContext().setAuthentication(authResult);
-            filterChain.doFilter(servletRequest, servletResponse);
+        try {
+            Authentication authResult = authenticationManager.authenticate(customAuthentication);
+            if (authResult.isAuthenticated()) { // необязательная проверка
+                SecurityContextHolder.getContext().setAuthentication(authResult);
+                filterChain.doFilter(servletRequest, servletResponse);
+            }
+        } catch (AuthenticationException e) {
+            ((HttpServletResponse) servletResponse).setStatus(HttpServletResponse.SC_FORBIDDEN);
         }
     }
 }
