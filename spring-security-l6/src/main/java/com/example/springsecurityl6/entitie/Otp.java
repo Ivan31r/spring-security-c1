@@ -3,13 +3,14 @@ package com.example.springsecurityl6.entitie;
 import jakarta.persistence.*;
 import lombok.Data;
 
-//@Table(name = "otp")
+@Table(name = "otps")
 @Entity
 @Data
 public class Otp {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name="article_gen", sequenceName="OTPS_SEQ")
     private Integer id;
     private String username;
     private String otp;

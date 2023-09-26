@@ -9,9 +9,9 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -23,14 +23,15 @@ import java.util.UUID;
 public class UserNamePasswordAuthFilter extends OncePerRequestFilter {
 
     @Autowired
+    @Lazy
     private AuthenticationManager authenticationManager;
     @Autowired
     private OtpRepository otpRepository;
 
-    @Override
-    protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
-        return !request.getServletPath().equals("/login");
-    }
+//    @Override
+//    protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
+//        return !request.getServletPath().equals("/login");
+//    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,
@@ -48,8 +49,7 @@ public class UserNamePasswordAuthFilter extends OncePerRequestFilter {
             authenticationManager.authenticate(usernamePasswordAuthentication);
 //            SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthentication);
 //            we generate an OTP
-//            String code = String.valueOf(new Random().nextInt(9999) + 1000);
-            String code = String.valueOf(999);
+            String code = String.valueOf(new Random().nextInt(9999) + 1000);
             Otp otpEntity = new Otp();
             otpEntity.setUsername(username);
             otpEntity.setOtp(code);

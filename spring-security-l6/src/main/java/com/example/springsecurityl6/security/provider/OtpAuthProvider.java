@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
-public class OtpAuthProvider6 implements AuthenticationProvider {
+public class OtpAuthProvider implements AuthenticationProvider {
     @Autowired
     private OtpRepository otpRepository;
 

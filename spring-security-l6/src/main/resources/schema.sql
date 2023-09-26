@@ -6,8 +6,8 @@ CREATE TABLE users
     password varchar
 );
 
-drop table if exists otp;
-create table otp
+drop table if exists otps;
+create table otps
 (
   id bigint primary key ,
   username varchar,

@@ -9,10 +9,12 @@ spring:
   h2:
     console:
       enabled: true
-  sql:
-    init:
-      schema-locations: classpath*:schema.sql
-      data-locations: classpath:data.sql
+#  sql:
+#    init:
+#      schema-locations: classpath*:schema.sql
+#      data-locations: classpath*:data.sql
 #      mode: always
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: none
