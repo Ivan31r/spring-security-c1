@@ -42,13 +42,14 @@ public class UserNamePasswordAuthFilter extends OncePerRequestFilter {
         var username = request.getHeader("username");
         var password = request.getHeader("password");
         var otp = request.getHeader("otp");
-        if (otp != null) {
+        if (otp == null) {
             //step 1
             Authentication usernamePasswordAuthentication = new UsernamePasswordAuthentication(username, password);
-            usernamePasswordAuthentication = authenticationManager.authenticate(usernamePasswordAuthentication);
+            authenticationManager.authenticate(usernamePasswordAuthentication);
 //            SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthentication);
 //            we generate an OTP
-            String code = String.valueOf(new Random().nextInt(9999) + 1000);
+//            String code = String.valueOf(new Random().nextInt(9999) + 1000);
+            String code = String.valueOf(999);
             Otp otpEntity = new Otp();
             otpEntity.setUsername(username);
             otpEntity.setOtp(code);
@@ -56,7 +57,7 @@ public class UserNamePasswordAuthFilter extends OncePerRequestFilter {
         } else {
             //step 2
             Authentication otpAuthentication = new OtpAuthentication(username, otp);
-            otpAuthentication = authenticationManager.authenticate(otpAuthentication);
+            authenticationManager.authenticate(otpAuthentication);
 //            SecurityContextHolder.getContext().setAuthentication(otpAuthentication);
 //            we issue a token
             response.setHeader("Authorization", String.valueOf(UUID.randomUUID()));

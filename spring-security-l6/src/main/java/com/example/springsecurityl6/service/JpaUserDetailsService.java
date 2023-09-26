@@ -1,4 +1,4 @@
-package com.example.springsecurityl6;
+package com.example.springsecurityl6.service;
 
 import com.example.springsecurityl6.repository.UserRepository;
 import com.example.springsecurityl6.security.model.SecurityUserDecorator;

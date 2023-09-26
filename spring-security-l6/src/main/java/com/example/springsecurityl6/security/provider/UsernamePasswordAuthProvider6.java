@@ -1,6 +1,6 @@
 package com.example.springsecurityl6.security.provider;
 
-import com.example.springsecurityl6.JpaUserDetailsService;
+import com.example.springsecurityl6.service.JpaUserDetailsService;
 import com.example.springsecurityl6.security.authentications.UsernamePasswordAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -8,16 +8,17 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-
 @Component
-public class UsernamePasswordAuthProvider implements AuthenticationProvider {
+public class UsernamePasswordAuthProvider6 implements AuthenticationProvider {
 
     @Autowired
     private JpaUserDetailsService userDetailsService;
+//    @Autowired
+//    private UserDetailsService userDetailsService;
     @Autowired
     private PasswordEncoder passwordEncoder;
 

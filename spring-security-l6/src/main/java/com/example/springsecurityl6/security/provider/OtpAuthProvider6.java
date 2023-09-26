@@ -12,10 +12,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Consumer;
 
 @Component
-public class OtpAuthProvider implements AuthenticationProvider {
+public class OtpAuthProvider6 implements AuthenticationProvider {
     @Autowired
     private OtpRepository otpRepository;
 
