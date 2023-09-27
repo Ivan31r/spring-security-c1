@@ -21,6 +21,7 @@
         <module>spring-security-l4</module>
         <module>spring-security-l5</module>
         <module>spring-security-l6</module>
+        <module>spring-security-l7(l6-2)</module>
     </modules>
 
 </project>
