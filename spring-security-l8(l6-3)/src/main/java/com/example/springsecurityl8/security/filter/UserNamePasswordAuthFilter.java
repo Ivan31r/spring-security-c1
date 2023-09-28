@@ -59,6 +59,7 @@ public class UserNamePasswordAuthFilter extends OncePerRequestFilter {
             otpRepository.save(otpEntity);
         } else {
             //step 2
+            //в реальных кейсах срок OTP нужно ограничивать по времени жизни или обнулять сразу после использования.
             Authentication otpAuthentication = new OtpAuthentication(username, otp);
             Authentication authenticate = authenticationManager.authenticate(otpAuthentication);
 //            SecurityContextHolder.getContext().setAuthentication(otpAuthentication);
