@@ -23,6 +23,7 @@
         <module>spring-security-l6(6-1)</module>
         <module>spring-security-l7(l6-2)</module>
         <module>spring-security-l8(l6-3)</module>
+        <module>spring-security-l9</module>
     </modules>
 
 </project>
