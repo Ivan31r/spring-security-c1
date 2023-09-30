@@ -20,10 +20,12 @@
         <module>spring-security-l3</module>
         <module>spring-security-l4</module>
         <module>spring-security-l5</module>
-        <module>spring-security-l6(6-1)</module>
-        <module>spring-security-l7(l6-2)</module>
-        <module>spring-security-l8(l6-3)</module>
+        <module>spring-security-l6-6.1</module>
+        <module>spring-security-l7-6.2</module>
+        <module>spring-security-l8-6.3</module>
         <module>spring-security-l9</module>
+        <module>spring-security-l10</module>
+        <module>spring-security-l11</module>
     </modules>
 
 </project>

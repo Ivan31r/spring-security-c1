@@ -4,12 +4,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.security.web.csrf.CsrfTokenRepository;
+import org.springframework.security.web.csrf.DefaultCsrfToken;
 
 public class CustomCsrfTokenRepository implements CsrfTokenRepository {
     @Override
     public CsrfToken generateToken(HttpServletRequest request) {
-//        CsrfToken е
-        return null;
+        //по непонятной мне причине, header и параметр меняются, а сам токен нет =)
+        return new DefaultCsrfToken("X-CSRF-TOKEN", "_csrf","123456789");
     }
 
     @Override
