@@ -1,4 +1,4 @@
-package com.example.springsecurityl11;
+package com.example.springsecurityl12;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

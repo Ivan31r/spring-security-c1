@@ -26,6 +26,7 @@
         <module>spring-security-l9</module>
         <module>spring-security-l10</module>
         <module>spring-security-l11</module>
+        <module>spring-security-l12</module>
     </modules>
 
 </project>
