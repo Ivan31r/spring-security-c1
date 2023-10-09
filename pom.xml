@@ -27,6 +27,11 @@
         <module>spring-security-l10</module>
         <module>spring-security-l11</module>
         <module>spring-security-l12</module>
+        <module>spring-security-l13</module>
+        <module>spring-security-l14-auth-server</module>
+        <module>spring-security-l14-resource-server</module>
+        <module>spring-security-l15-auth-server</module>
+        <module>spring-security-l15-resource-server</module>
     </modules>
 
 </project>

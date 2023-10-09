@@ -23,7 +23,6 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @Configuration
 public class ProjectConfig {
 
-
     @Bean
     public JdbcUserDetailsManager userDetailsService() {
         /* что использовали
