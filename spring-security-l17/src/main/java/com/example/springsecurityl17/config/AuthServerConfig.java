@@ -1,6 +1,6 @@
-package com.example.springsecurityl16.config;
+package com.example.springsecurityl17.config;
 
-import com.example.springsecurityl16.security.JpaClientDetailsService;
+import com.example.springsecurityl17.security.JpaClientDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

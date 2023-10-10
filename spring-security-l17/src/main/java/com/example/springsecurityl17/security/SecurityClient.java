@@ -1,6 +1,6 @@
-package com.example.springsecurityl16.security;
+package com.example.springsecurityl17.security;
 
-import com.example.springsecurityl16.model.Client;
+import com.example.springsecurityl17.model.Client;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.provider.ClientDetails;
 

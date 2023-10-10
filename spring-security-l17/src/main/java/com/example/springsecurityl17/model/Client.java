@@ -1,4 +1,4 @@
-package com.example.springsecurityl16.model;
+package com.example.springsecurityl17.model;
 
 import lombok.Data;
 

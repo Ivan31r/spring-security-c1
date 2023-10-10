@@ -1,6 +1,6 @@
-package com.example.springsecurityl16.security;
+package com.example.springsecurityl17.security;
 
-import com.example.springsecurityl16.repository.ClientRepository;
+import com.example.springsecurityl17.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.provider.ClientDetails;
 import org.springframework.security.oauth2.provider.ClientDetailsService;

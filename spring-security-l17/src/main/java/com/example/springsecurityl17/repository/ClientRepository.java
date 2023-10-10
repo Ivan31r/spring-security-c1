@@ -1,6 +1,6 @@
-package com.example.springsecurityl16.repository;
+package com.example.springsecurityl17.repository;
 
-import com.example.springsecurityl16.model.Client;
+import com.example.springsecurityl17.model.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
