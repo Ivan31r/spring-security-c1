@@ -34,7 +34,8 @@
         <module>spring-security-l15-auth-server</module>
         <module>spring-security-l15-resource-server</module>
         <module>spring-security-l16</module>
-        <module>spring-security-l17</module>
+        <module>spring-security-l17-auth-server</module>
+        <module>spring-security-l17-resource-server</module>
     </modules>
 
 </project>
