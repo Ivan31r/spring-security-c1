@@ -1,4 +1,4 @@
-package com.example.springsecurityl18resourceserver;
+package com.example.springsecurityl19resourceserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -6,8 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SpringSecurityL18ResourceServerApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

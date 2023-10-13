@@ -1,4 +1,4 @@
-package com.example.springsecurityl18resourceserver.controller;
+package com.example.springsecurityl19resourceserver.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

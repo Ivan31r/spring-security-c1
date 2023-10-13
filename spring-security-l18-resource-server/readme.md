@@ -1,0 +1,1 @@
+Generate .jks certificate was in video №19
