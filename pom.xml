@@ -41,6 +41,9 @@
         <module>spring-security-l19-auth-server</module>
         <module>spring-security-l19-resource-server</module>
         <module>spring-security-l20-resource-server</module>
+        <module>spring-security-l21-auth-server-opaque-token</module>
+        <module>spring-security-l21-resource-server-opaque-token</module>
+        <module>spring-security-l21-resource-server-jwt-token</module>
     </modules>
 
 </project>
