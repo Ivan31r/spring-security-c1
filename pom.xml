@@ -40,6 +40,7 @@
         <module>spring-security-l18-resource-server</module>
         <module>spring-security-l19-auth-server</module>
         <module>spring-security-l19-resource-server</module>
+        <module>spring-security-l20-resource-server</module>
     </modules>
 
 </project>
