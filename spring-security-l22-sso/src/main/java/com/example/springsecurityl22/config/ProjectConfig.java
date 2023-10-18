@@ -25,8 +25,8 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
     private ClientRegistration gitHubRegistration() {
         return CommonOAuth2Provider.GITHUB.getBuilder("github")
-                .clientId("487da928ea3e0ffb36d7")
-                .clientSecret("66ad999cf45c4ca7d08ab3f0184a0f9ac05855f1")
+                .clientId("client-id-from-github")
+                .clientSecret("client-secret-from-github")
                 .build();
     }
 }
