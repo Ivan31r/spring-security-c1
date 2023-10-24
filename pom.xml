@@ -46,6 +46,7 @@
         <module>spring-security-l21-resource-server-jwt-token</module>
         <module>spring-security-l22-sso</module>
         <module>spring-security-l23</module>
+        <module>spring-security-l24</module>
     </modules>
 
 </project>
