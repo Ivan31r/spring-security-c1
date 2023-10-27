@@ -47,6 +47,10 @@
         <module>spring-security-l22-sso</module>
         <module>spring-security-l23</module>
         <module>spring-security-l24</module>
+        <module>spring-security-l25</module>
+        <module>spring-security-l26-auth-server</module>
+        <module>spring-security-l26-resource-server</module>
+        <module>spring-security-l26-resource-server-dsl</module>
     </modules>
 
 </project>
