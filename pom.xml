@@ -52,6 +52,7 @@
         <module>spring-security-l26-resource-server</module>
         <module>spring-security-l26-resource-server-dsl</module>
         <module>spring-security-l27</module>
+        <module>spring-security-l28</module>
     </modules>
 
 </project>
