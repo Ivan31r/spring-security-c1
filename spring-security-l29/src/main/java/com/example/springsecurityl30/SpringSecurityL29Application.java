@@ -1,4 +1,4 @@
-package com.example.springsecurityl29;
+package com.example.springsecurityl30;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringSecurityL29Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityL29Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringSecurityL29Application.class, args);
+    }
 
 }

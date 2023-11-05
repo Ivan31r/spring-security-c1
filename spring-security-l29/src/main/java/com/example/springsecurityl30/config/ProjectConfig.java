@@ -1,6 +1,6 @@
-package com.example.springsecurityl29.config;
+package com.example.springsecurityl30.config;
 
-import com.example.springsecurityl29.security.DocumentPermissionEvaluator;
+import com.example.springsecurityl30.security.DocumentPermissionEvaluator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.PermissionEvaluator;

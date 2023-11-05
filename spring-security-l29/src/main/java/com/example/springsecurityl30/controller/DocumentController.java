@@ -1,7 +1,7 @@
-package com.example.springsecurityl29.controller;
+package com.example.springsecurityl30.controller;
 
-import com.example.springsecurityl29.model.Document;
-import com.example.springsecurityl29.service.DocumentService;
+import com.example.springsecurityl30.model.Document;
+import com.example.springsecurityl30.service.DocumentService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

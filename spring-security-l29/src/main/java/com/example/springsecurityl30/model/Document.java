@@ -1,4 +1,4 @@
-package com.example.springsecurityl29.model;
+package com.example.springsecurityl30.model;
 
 public class Document {
     private String text;

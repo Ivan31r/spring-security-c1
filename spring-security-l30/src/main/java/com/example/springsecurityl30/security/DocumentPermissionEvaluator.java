@@ -1,6 +1,6 @@
-package com.example.springsecurityl29.security;
+package com.example.springsecurityl30.security;
 
-import com.example.springsecurityl29.model.Document;
+import com.example.springsecurityl30.model.Document;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.core.Authentication;
 
@@ -13,12 +13,12 @@ public class DocumentPermissionEvaluator implements PermissionEvaluator {
                                  Object targetDomainObject,
                                  Object permission) {
         List<Document> returnedList = (List<Document>) targetDomainObject;
-        String name = authentication.getName();
-        String auth = (String) permission;
+        String name = authentication.getName();       //Username
+        String auth = (String) permission;           //входной authorities
 
         boolean match = returnedList.stream().allMatch(document -> document.getUser().equals(name));
 
-        boolean hasProperAuth = authentication.getAuthorities().stream().anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals(auth));
+        boolean hasProperAuth = authentication.getAuthorities().stream().anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals(auth)); //все authorities
 
         return match && hasProperAuth;
     }

@@ -1,6 +1,6 @@
-package com.example.springsecurityl29.service;
+package com.example.springsecurityl30.service;
 
-import com.example.springsecurityl29.model.Document;
+import com.example.springsecurityl30.model.Document;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.stereotype.Service;
 
