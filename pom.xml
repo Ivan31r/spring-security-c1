@@ -55,6 +55,7 @@
         <module>spring-security-l28</module>
         <module>spring-security-l29</module>
         <module>spring-security-l30</module>
+        <module>spring-security-l31</module>
     </modules>
 
 </project>
