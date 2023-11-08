@@ -57,6 +57,7 @@
         <module>spring-security-l30</module>
         <module>spring-security-l31</module>
         <module>spring-security-l32-reactive-resource-server</module>
+        <module>spring-security-l33-integration-test-l1</module>
     </modules>
 
 </project>
