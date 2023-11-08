@@ -56,6 +56,7 @@
         <module>spring-security-l29</module>
         <module>spring-security-l30</module>
         <module>spring-security-l31</module>
+        <module>spring-security-l32-reactive-resource-server</module>
     </modules>
 
 </project>
